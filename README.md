@@ -7,7 +7,7 @@ Having 2 type of request:
 +Changing the value of 1 element in an array
 
 +Finding the maximum value in range from l to r (l<=r)
-\n
+
 Input: array with N elements, Q, and numbers for each request
 
 Output: answer in 2nd request
