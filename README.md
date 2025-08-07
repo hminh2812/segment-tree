@@ -27,7 +27,7 @@ void build(int id,int l,int r){<br>
 
 &emsp;int mid=l+r>>1;<br>
 &emsp;build(id<<1,l,mid); &emsp;build(id<<1|1,mid+1,r);<br>
-&emsp;st[id]=max(st[id<<1],st[id<<1|1];<br>;
+&emsp;st[id]=max(st[id<<1],st[id<<1|1]);<br>;
 }<br>
 
 int main(){<br>
