@@ -43,6 +43,15 @@ void update(int id,int l,int r,int tar_id,int V){<br>
 &emsp;st[id]=max(st[id<<1],st[id<<1|1]);<br>
 }<br>
 
+int get(int id,int l,int r){<br>
+&emsp;if(l>tr||tl>r)&emsp; return -inf;<br>
+&emsp;if(tl<=l&&r<=tr) return st[id];<br>
+
+&emsp;int mid=l+r>>1;<br>
+&emsp;return max(get(id<<1,l,mid),get(id<<1|1,mid+1,r));<br>
+
+}<br>
+
 int main(){<br>
   &emsp;cin>>N;<br>
   &emsp;for(int i=1;i<=N;++i) cin>>arr[i];<br><br>
@@ -55,5 +64,10 @@ int main(){<br>
   &emsp;&emsp;&emsp;cin>>q_id>>value;<br>
   &emsp;&emsp;&emsp;update(1,1,N,q_id,value);<br>
   &emsp;&emsp;}<br>
+
+  &emsp;&emsp;else{<br>
+  &emsp;&emsp;&emsp;cin>>tl>>tr;<br>
+  &emsp;&emsp;&emsp;cout<<get(1,1,N)<<'\n';<br>
+  
   &emsp;}<br>
 }
