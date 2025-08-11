@@ -68,6 +68,7 @@ int main(){<br>
   &emsp;&emsp;else{<br>
   &emsp;&emsp;&emsp;cin>>tl>>tr;<br>
   &emsp;&emsp;&emsp;cout<<get(1,1,N)<<'\n';<br>
+  &emsp;&emsp;}<br>
   
   &emsp;}<br>
 }
